@@ -20,7 +20,7 @@ exports.config = {
   },
   plugins: {
     screenshotOnFail: {
-      enabled: true
+      enabled: false
     },
     htmlReporter: {
       enabled: true

@@ -21,12 +21,12 @@ exports.config = {
   },
   plugins: {
     screenshotOnFail: {
-      enabled: true
+      enabled: false
     },
     allure: {
-      enabled: true,
+      enabled: false,
       require: 'allure-codeceptjs',
-      screenshotsForAllureReport: true
+      screenshotsForAllureReport: false
     },
     retryFailedStep: {
       enabled: true
