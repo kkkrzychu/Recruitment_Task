@@ -1,5 +1,3 @@
-import { log } from "node:console";
-
 export = function () {
   return actor({
     loginAsStandardUser() {

@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1771365765593' stop='1771365771482'>
+    <name>Products API:</name>
+    <title>Products API:</title>
+    <test-cases>
+        <test-case start='1771365765595' status='passed' stop='1771365765700'>
+            <name>Get all products and print titles with odd IDs</name>
+            <title>Get all products and print titles with odd IDs</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365765702' status='passed' stop='1771365765833'>
+            <name>Create new product</name>
+            <title>Create new product</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365765834' status='passed' stop='1771365766090'>
+            <name>Get and update third product</name>
+            <title>Get and update third product</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365766091' status='passed' stop='1771365766219'>
+            <name>Get products with delay parameter {"delay":"0"}</name>
+            <title>Get products with delay parameter {"delay":"0"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365766220' status='failed' stop='1771365771355'>
+            <name>Get products with delay parameter {"delay":"5000"}</name>
+            <title>Get products with delay parameter {"delay":"5000"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Expected response time to be less than or equal to 1000ms, but got 5131ms</message>
+                <stack-trace>AssertionError [ERR_ASSERTION]: Expected response time to be less than or equal to 1000ms, but got 5131ms
+                    at Actor.assertResponseTime (C:\DEV\automation-recruitment-task\APITest.DummyJSON\steps_file.ts:112:14)
+                    at MetaStep.run (C:\DEV\automation-recruitment-task\APITest.DummyJSON\node_modules\codeceptjs\lib\step\meta.js:85:21)
+                    at C:\DEV\automation-recruitment-task\APITest.DummyJSON\step_definitions\steps.ts:42:5
+                    at runSteps (C:\DEV\automation-recruitment-task\APITest.DummyJSON\node_modules\codeceptjs\lib\mocha\gherkin.js:85:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:103:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1771365771357' status='failed' stop='1771365771481'>
+            <name>Get products with delay parameter {"delay":"6000"}</name>
+            <title>Get products with delay parameter {"delay":"6000"}</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Expected status 200 but got 400
+                
+                400 !== 200
+                </message>
+                <stack-trace>AssertionError [ERR_ASSERTION]: Expected status 200 but got 400
+                
+                400 !== 200
+                
+                    at Actor.assertResponseStatus (C:\DEV\automation-recruitment-task\APITest.DummyJSON\steps_file.ts:28:14)
+                    at MetaStep.run (C:\DEV\automation-recruitment-task\APITest.DummyJSON\node_modules\codeceptjs\lib\step\meta.js:85:21)
+                    at C:\DEV\automation-recruitment-task\APITest.DummyJSON\step_definitions\steps.ts:34:5
+                    at runSteps (C:\DEV\automation-recruitment-task\APITest.DummyJSON\node_modules\codeceptjs\lib\mocha\gherkin.js:85:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:103:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
