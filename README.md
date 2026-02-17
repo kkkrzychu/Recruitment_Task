@@ -19,34 +19,48 @@ Make sure the following are installed:
 # Installation
 
 To install Allure globally:
-> npm install -g allure-commandline --save-dev
+```bash
+npm install -g allure-commandline --save-dev
+```
 
 ## Install API dependencies
->>cd APITest.DummyJSON
->
->>npm install
+
+```bash
+cd APITest.DummyJSON
+
+npm install
+```
 
 ## Install UI dependencies
->>cd UITest.SauceDemo
->
->>npm install
->
->>npx playwright install
+```bash
+cd UITest.SauceDemo
 
-Note: 'npx playwright install' is required to download browser binaries
+npm install
+
+npx playwright install
+```
+
+
+>Note: 'npx playwright install' is required to download browser binaries
 
 ---
 # Running Tests with Allure Reporting
 ## Run API Tests
->>cd APITest.DummyJSON
->
->>npx codeceptjs run
->
->>allure serve
+```bash
+cd APITest.DummyJSON
+
+npx codeceptjs run
+
+allure serve
+```
+
 
 ## Run UI tests
->>cd UITest.SauceDemo
->
->>npx codeceptjs run
->
->>allure serve
+```bash
+cd UITest.SauceDemo
+
+npx codeceptjs run
+
+allure serve
+```
+
