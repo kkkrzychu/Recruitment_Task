@@ -1,5 +1,5 @@
 exports.config = {
-  output: './output',
+  output: './allure-results',
   helpers: {
     REST: {
       endpoint: 'https://dummyjson.com'
@@ -22,8 +22,15 @@ exports.config = {
     screenshotOnFail: {
       enabled: false
     },
+    allure: {
+      enabled: true,    
+      //resultsdir: 'output/allure-results',
+     // resultsDir: "allure-results",  
+      require: '@codeceptjs/allure-legacy',
+      screenshotsForAllureReport: false
+    },
     htmlReporter: {
-      enabled: true
+      enabled: false
     },
     retryFailedStep: {
       enabled: true

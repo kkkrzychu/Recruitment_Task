@@ -1,5 +1,6 @@
 exports.config = {
-  output: './output',
+  //tests: 'C:\DEV\automation-recruitment-task\UITest.SauceDemo\step_definitions\steps.ts',
+  output: './allure-results',
   helpers: {
     Playwright: {
       browser: 'chromium',
@@ -10,7 +11,6 @@ exports.config = {
   include: {
     I: './steps_file'
   },
-  mocha: {},
   bootstrap: null,
   timeout: null,
   teardown: null,
@@ -24,8 +24,10 @@ exports.config = {
       enabled: false
     },
     allure: {
-      enabled: false,
-      require: 'allure-codeceptjs',
+      enabled: true,    
+      //resultsdir: 'output/allure-results',
+     // resultsDir: "allure-results",  
+      require: '@codeceptjs/allure-legacy',
       screenshotsForAllureReport: false
     },
     retryFailedStep: {
@@ -45,7 +47,6 @@ exports.config = {
       pattern: 'amOnPage',
       timeout: 0
     }
-  ],
-  tests: './SauceDemoUITests_test.ts',
-  name: 'CodeceptJSPlaywright'
+  ],  
+  name: 'UITest.SauceDemo'
 }

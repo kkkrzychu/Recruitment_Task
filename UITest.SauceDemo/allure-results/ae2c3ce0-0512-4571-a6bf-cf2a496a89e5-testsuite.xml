@@ -1,0 +1,597 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1771365184924' stop='1771365198278'>
+    <name>SauceDemo store functionality:</name>
+    <title>SauceDemo store functionality:</title>
+    <test-cases>
+        <test-case start='1771365185073' status='passed' stop='1771365188687'>
+            <name>Standard user removes the third item before checkout and completes purchase</name>
+            <title>Standard user removes the third item before checkout and completes purchase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1771365185152' status='passed' stop='1771365186471'>
+                    <name>Given I am logged in as a "standard_user" ""</name>
+                    <title>Given I am logged in as a "standard_user" ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365185152' status='passed' stop='1771365186471'>
+                            <name>I login as standard user </name>
+                            <title>I login as standard user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365185152' status='passed' stop='1771365185629'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365185629' status='passed' stop='1771365185972'>
+                                    <name>I fill field "#user-name", "standard_user"</name>
+                                    <title>I fill field "#user-name", "standard_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365185972' status='passed' stop='1771365186283'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365186283' status='passed' stop='1771365186471'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365186471' status='passed' stop='1771365187280'>
+                    <name>When I add all items to the cart ""</name>
+                    <title>When I add all items to the cart ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365186471' status='passed' stop='1771365187280'>
+                            <name>I add all items to cart </name>
+                            <title>I add all items to cart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365186471' status='passed' stop='1771365186610'>
+                                    <name>I click "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365186610' status='passed' stop='1771365186735'>
+                                    <name>I click "#add-to-cart-sauce-labs-bike-light"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-bike-light"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365186735' status='passed' stop='1771365186861'>
+                                    <name>I click "#add-to-cart-sauce-labs-bolt-t-shirt"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-bolt-t-shirt"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365186861' status='passed' stop='1771365187000'>
+                                    <name>I click "#add-to-cart-sauce-labs-fleece-jacket"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-fleece-jacket"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365187000' status='passed' stop='1771365187139'>
+                                    <name>I click "#add-to-cart-sauce-labs-onesie"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-onesie"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365187140' status='passed' stop='1771365187280'>
+                                    <name>I click "button[id='add-to-cart-test.allthethings()-t-shirt-(red)']"</name>
+                                    <title>I click "button[id='add-to-cart-test.allthethings()-t-shirt-(red)']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365187280' status='passed' stop='1771365187421'>
+                    <name>And I go to the cart ""</name>
+                    <title>And I go to the cart ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365187280' status='passed' stop='1771365187421'>
+                            <name>I go to the cart </name>
+                            <title>I go to the cart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365187280' status='passed' stop='1771365187420'>
+                                    <name>I click ".shopping_cart_link"</name>
+                                    <title>I click ".shopping_cart_link"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365187421' status='passed' stop='1771365187545'>
+                    <name>And I remove third item from the cart ""</name>
+                    <title>And I remove third item from the cart ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365187421' status='passed' stop='1771365187545'>
+                            <name>I remove third item from cart </name>
+                            <title>I remove third item from cart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365187421' status='passed' stop='1771365187544'>
+                                    <name>I click "#remove-sauce-labs-bolt-t-shirt"</name>
+                                    <title>I click "#remove-sauce-labs-bolt-t-shirt"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365187545' status='passed' stop='1771365188530'>
+                    <name>And I proceed to checkout overview ""</name>
+                    <title>And I proceed to checkout overview ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365187545' status='passed' stop='1771365188530'>
+                            <name>I proceed to checkout overview </name>
+                            <title>I proceed to checkout overview </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365187545' status='passed' stop='1771365187670'>
+                                    <name>I click "#checkout"</name>
+                                    <title>I click "#checkout"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365187671' status='passed' stop='1771365187907'>
+                                    <name>I fill field "#first-name", "Nikodem"</name>
+                                    <title>I fill field "#first-name", "Nikodem"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365187907' status='passed' stop='1771365188187'>
+                                    <name>I fill field "#last-name", "Chlebowski"</name>
+                                    <title>I fill field "#last-name", "Chlebowski"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188188' status='passed' stop='1771365188387'>
+                                    <name>I fill field "#postal-code", "12345"</name>
+                                    <title>I fill field "#postal-code", "12345"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188388' status='passed' stop='1771365188530'>
+                                    <name>I click "#continue"</name>
+                                    <title>I click "#continue"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365188530' status='passed' stop='1771365188541'>
+                    <name>Then I should see only the items selected for purchase ""</name>
+                    <title>Then I should see only the items selected for purchase ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365188530' status='passed' stop='1771365188541'>
+                            <name>I should see only remaining items </name>
+                            <title>I should see only remaining items </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365188530' status='passed' stop='1771365188533'>
+                                    <name>I dont see "Sauce Labs Bolt T-Shirt"</name>
+                                    <title>I dont see "Sauce Labs Bolt T-Shirt"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188534' status='passed' stop='1771365188535'>
+                                    <name>I see "Sauce Labs Backpack"</name>
+                                    <title>I see "Sauce Labs Backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188535' status='passed' stop='1771365188537'>
+                                    <name>I see "Sauce Labs Bike Light"</name>
+                                    <title>I see "Sauce Labs Bike Light"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188537' status='passed' stop='1771365188538'>
+                                    <name>I see "Sauce Labs Fleece Jacket"</name>
+                                    <title>I see "Sauce Labs Fleece Jacket"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188538' status='passed' stop='1771365188540'>
+                                    <name>I see "Sauce Labs Onesie"</name>
+                                    <title>I see "Sauce Labs Onesie"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365188540' status='passed' stop='1771365188541'>
+                                    <name>I see "Test.allTheThings() T-Shirt (Red)"</name>
+                                    <title>I see "Test.allTheThings() T-Shirt (Red)"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365188541' status='passed' stop='1771365188548'>
+                    <name>And The total count of items in the overview should be 5 ""</name>
+                    <title>And The total count of items in the overview should be 5 ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365188541' status='passed' stop='1771365188548'>
+                            <name>I see number of visible elements ".cart_item", 5</name>
+                            <title>I see number of visible elements ".cart_item", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365188548' status='passed' stop='1771365188684'>
+                    <name>When I finish the purchase ""</name>
+                    <title>When I finish the purchase ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365188548' status='passed' stop='1771365188684'>
+                            <name>I finish purchase </name>
+                            <title>I finish purchase </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365188548' status='passed' stop='1771365188684'>
+                                    <name>I click "#finish"</name>
+                                    <title>I click "#finish"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365188684' status='passed' stop='1771365188687'>
+                    <name>Then Website should show me the confirmation page ""</name>
+                    <title>Then Website should show me the confirmation page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365188684' status='passed' stop='1771365188687'>
+                            <name>I see confirmation page </name>
+                            <title>I see confirmation page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365188684' status='passed' stop='1771365188687'>
+                                    <name>I see "Thank you for your order"</name>
+                                    <title>I see "Thank you for your order"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365188695' status='passed' stop='1771365190391'>
+            <name>Problem user adds one item to the cart and validates</name>
+            <title>Problem user adds one item to the cart and validates</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1771365188751' status='passed' stop='1771365189969'>
+                    <name>Given I am logged in as a "problem_user" ""</name>
+                    <title>Given I am logged in as a "problem_user" ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365188751' status='passed' stop='1771365189969'>
+                            <name>I login as problem user </name>
+                            <title>I login as problem user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365188751' status='passed' stop='1771365189188'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365189188' status='passed' stop='1771365189500'>
+                                    <name>I fill field "#user-name", "problem_user"</name>
+                                    <title>I fill field "#user-name", "problem_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365189501' status='passed' stop='1771365189814'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365189814' status='passed' stop='1771365189969'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365189969' status='passed' stop='1771365190124'>
+                    <name>When I open the item one product page ""</name>
+                    <title>When I open the item one product page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365189969' status='passed' stop='1771365190124'>
+                            <name>I open item one product page </name>
+                            <title>I open item one product page </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365189969' status='passed' stop='1771365190123'>
+                                    <name>I click "a[id="item_1_title_link"]"</name>
+                                    <title>I click "a[id="item_1_title_link"]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365190124' status='passed' stop='1771365190248'>
+                    <name>And I add the item to the cart ""</name>
+                    <title>And I add the item to the cart ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365190124' status='passed' stop='1771365190248'>
+                            <name>I add the item to the cart </name>
+                            <title>I add the item to the cart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365190124' status='passed' stop='1771365190248'>
+                                    <name>I click "#add-to-cart"</name>
+                                    <title>I click "#add-to-cart"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365190248' status='passed' stop='1771365190389'>
+                    <name>And I go to the cart ""</name>
+                    <title>And I go to the cart ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365190248' status='passed' stop='1771365190389'>
+                            <name>I go to the cart </name>
+                            <title>I go to the cart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365190248' status='passed' stop='1771365190388'>
+                                    <name>I click ".shopping_cart_link"</name>
+                                    <title>I click ".shopping_cart_link"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365190389' status='passed' stop='1771365190391'>
+                    <name>Then I should see Sauce Labs Onesie in the cart ""</name>
+                    <title>Then I should see Sauce Labs Onesie in the cart ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365190389' status='passed' stop='1771365190391'>
+                            <name>I should see sauce labs onesie in the cart </name>
+                            <title>I should see sauce labs onesie in the cart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365190389' status='passed' stop='1771365190391'>
+                                    <name>I see "Sauce Labs Onesie"</name>
+                                    <title>I see "Sauce Labs Onesie"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365190396' status='passed' stop='1771365196956'>
+            <name>Standard user sorts products by name</name>
+            <title>Standard user sorts products by name</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1771365190448' status='passed' stop='1771365191672'>
+                    <name>Given I am logged in as a "standard_user" ""</name>
+                    <title>Given I am logged in as a "standard_user" ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365190448' status='passed' stop='1771365191672'>
+                            <name>I login as standard user </name>
+                            <title>I login as standard user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365190448' status='passed' stop='1771365190890'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365190890' status='passed' stop='1771365191211'>
+                                    <name>I fill field "#user-name", "standard_user"</name>
+                                    <title>I fill field "#user-name", "standard_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365191211' status='passed' stop='1771365191515'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365191516' status='passed' stop='1771365191672'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365191672' status='passed' stop='1771365196942'>
+                    <name>When I sort products by name from A to Z ""</name>
+                    <title>When I sort products by name from A to Z ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365191672' status='passed' stop='1771365196942'>
+                            <name>I sort items from ato z </name>
+                            <title>I sort items from ato z </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365191672' status='passed' stop='1771365191812'>
+                                    <name>I click ".product_sort_container"</name>
+                                    <title>I click ".product_sort_container"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365191813' status='passed' stop='1771365196942'>
+                                    <name>I select option ".product_sort_container", "az"</name>
+                                    <title>I select option ".product_sort_container", "az"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365196942' status='passed' stop='1771365196956'>
+                    <name>Then The products should be sorted alphabetically ""</name>
+                    <title>Then The products should be sorted alphabetically ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365196942' status='passed' stop='1771365196955'>
+                            <name>I grab text from all ".inventory_item_name"</name>
+                            <title>I grab text from all ".inventory_item_name"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1771365196961' status='passed' stop='1771365198273'>
+            <name>Locked out user fails to log in</name>
+            <title>Locked out user fails to log in</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1771365197030' status='passed' stop='1771365198145'>
+                    <name>Given I provide credentials for a "locked_out_user" ""</name>
+                    <title>Given I provide credentials for a "locked_out_user" ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365197030' status='passed' stop='1771365198145'>
+                            <name>I provide credentials for locked out user </name>
+                            <title>I provide credentials for locked out user </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365197030' status='passed' stop='1771365197487'>
+                                    <name>I am on page "/"</name>
+                                    <title>I am on page "/"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365197488' status='passed' stop='1771365197840'>
+                                    <name>I fill field "#user-name", "locked_out_user"</name>
+                                    <title>I fill field "#user-name", "locked_out_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1771365197841' status='passed' stop='1771365198145'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365198145' status='passed' stop='1771365198271'>
+                    <name>When I attempt to log in ""</name>
+                    <title>When I attempt to log in ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365198145' status='passed' stop='1771365198271'>
+                            <name>I attempt to log in </name>
+                            <title>I attempt to log in </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365198145' status='passed' stop='1771365198270'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1771365198271' status='passed' stop='1771365198273'>
+                    <name>Then I should see a login error message ""</name>
+                    <title>Then I should see a login error message ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1771365198271' status='passed' stop='1771365198273'>
+                            <name>I should see login error message </name>
+                            <title>I should see login error message </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1771365198271' status='passed' stop='1771365198273'>
+                                    <name>I see "Epic sadface: Sorry, this user has been locked out."</name>
+                                    <title>I see "Epic sadface: Sorry, this user has been locked out."</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
