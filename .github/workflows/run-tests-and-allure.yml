@@ -22,30 +22,31 @@ jobs:
         working-directory: APITest.DummyJSON
         run: npm ci
 
-      # Run API tests
-      - name: Run API tests
-        working-directory: APITest.DummyJSON
-        run: npx codeceptjs run --steps --plugins allure
-        continue-on-error: true
-
       # Install dependencies for UI tests
       - name: Install UI dependencies
         working-directory: UITest.SauceDemo
         run: npm ci
 
-      # Install Playwright browsers
+       # Install Playwright browsers
       - name: Install Playwright Browsers
         working-directory: UITest.SauceDemo
         run: npx playwright install --with-deps
+
+      # Setup Allure
+      - name: Install Allure Commandline
+        run: npm install -g allure-commandline@2.36.0
+
+      # Run API tests
+      - name: Run API tests
+        working-directory: APITest.DummyJSON
+        run: npx codeceptjs run --steps --plugins allure
+        continue-on-error: true    
 
       # Run UI tests
       - name: Run UI tests
         working-directory: UITest.SauceDemo
         run: npx codeceptjs run --steps --plugins allure
-
-      # Setup Allure
-      - name: Install Allure Commandline
-        run: npm install -g allure-commandline@2.36.0
+      
 
       # Combine allure-results from API and UI
       - name: Combine Allure results
@@ -60,7 +61,7 @@ jobs:
 
       # Deploy to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
