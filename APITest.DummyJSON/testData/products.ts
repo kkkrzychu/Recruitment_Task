@@ -1,11 +1,10 @@
-/**
- * Test data for Products API scenarios.
- *
- * This file centralizes commonly used product objects for reuse across multiple tests.
- * By keeping product definitions in a separate module, we:
- * - avoid duplication of test data
- * - make test steps more readable and concise
- * - allow easy modification of test data without touching feature steps
+/*
+Hard coded product data
+If i have more time i'd like to make it more like:
+
+Given I Create a new product
+| title        | description      | price | brand     |
+| Test Product | Test Description | 999   | Test Brand|
  */
 export const newProduct = {
   title: 'Test Product',

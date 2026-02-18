@@ -24,9 +24,7 @@ exports.config = {
       enabled: false
     },
     allure: {
-      enabled: true,    
-      //resultsdir: 'output/allure-results',
-     // resultsDir: "allure-results",  
+      enabled: true, 
       require: '@codeceptjs/allure-legacy',
       screenshotsForAllureReport: false
     },

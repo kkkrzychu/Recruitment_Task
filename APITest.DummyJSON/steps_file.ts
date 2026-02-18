@@ -9,25 +9,11 @@ export = function () {
 
   return actor({
 
-    /**
- * Sends HTTP request to given endpoint using native fetch.
- *
- * Why fetch instead of CodeceptJS REST helper?
- * ------------------------------------------------
- * In this specific scenario I needed:
- * - direct access to raw response data
- * - manual response time measurement
- * - explicit control over stored response values
- *
- * Although this introduces some duplication (base URL hardcoded),
- * it keeps the request/response handling fully transparent and easy to debug
- * within the scope of this recruitment task.
- *
- * In a production-ready framework this would be refactored into:
- * - centralized API client
- * - configurable base URL
- * - reusable request abstraction
- */
+    /*
+    * This method doesn't really meet DRY principle
+    * In a production-ready framework i would like to refactor it into reusable APIURL parameter
+    * Due to lack of time i decided to keep it simple and explicit
+    */
     async sendRequestToEndpoint(endpoint: string) {
       // Measure request duration manually
       const start = Date.now();
@@ -72,19 +58,8 @@ export = function () {
     },
 
     /**
- * Creates a new product using direct HTTP POST request.
- *
- * Why native fetch instead of CodeceptJS REST helper?
- * ----------------------------------------------------
- * For this recruitment task I decided to:
- * - keep request logic explicit and transparent
- * - manually control request payload and response handling
- * - store response data in a shared object for later assertions
- *
- * In a production-ready test framework this would typically be:
- * - moved to a centralized API client layer
- * - use configurable base URL
- * - reuse common request wrapper to avoid duplication
+ * Similar story as with sendRequestToEndpoint
+ * TODO: Refactor to accept dynamic payload and endpoint, reuse API client.
  */
     async createProduct(product: {
       title: string;
@@ -126,17 +101,8 @@ export = function () {
     },
 
     /**
-    * Updates an existing product using HTTP PUT request.
-    *
-    * This method intentionally:
-    * - uses native fetch for explicit control over request structure
-    * - defines update payload locally for scenario clarity
-    * - stores updated response separately for comparison with previously fetched data
-    *
-    * For a production-grade solution this would likely:
-    * - accept dynamic update payload as parameter
-    * - reuse a centralized API client
-    * - use configurable base URL instead of hardcoded value
+     * Again, hardcoded endpoint and payload structure for simplicity
+     * TODO: Refactor to be more flexible and reusable, extract API client logic
     */
 
     async updateProduct(id: number) {
