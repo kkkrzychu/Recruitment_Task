@@ -9,11 +9,6 @@ Given('I create a new product', async () => {
   await I.createProduct(newProduct);
 });
 
-/*Given('I get the product with id {int}', async (id: number) => {
-  await I.getTheProductWithID(id);
-});
-*/
-
 When('I update the product with id {int} with new title and description', async (id: number) => {
   await I.updateProduct(id);
 });
