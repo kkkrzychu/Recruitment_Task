@@ -65,6 +65,7 @@ Then('I should see Sauce Labs Onesie in the cart', () => {
   I.shouldSeeSauceLabsOnesieInTheCart();
 });
 
+//async function to check if products are sorted alphabetically
 Then('The products should be sorted alphabetically', async () => {
   const productNames = await I.grabTextFromAll('.inventory_item_name');
   const sortedNames = [...productNames].sort((a, b) => a.localeCompare(b));
