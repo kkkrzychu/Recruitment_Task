@@ -47,8 +47,8 @@ jobs:
       - name: Combine Allure results
         run: |
           mkdir -p combined-allure-results
-          cp -r API/allure-results/* combined-allure-results/ || true
-          cp -r UI/allure-results/* combined-allure-results/ || true
+          cp -r APITest.DummyJSON/allure-results/* combined-allure-results/ || true
+          cp -r UITest.SauceDemo/allure-results/* combined-allure-results/ || true
 
       # Generate HTML report
       - name: Generate Allure HTML
