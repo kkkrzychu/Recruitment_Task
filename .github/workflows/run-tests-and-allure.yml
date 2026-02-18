@@ -43,6 +43,12 @@ jobs:
         working-directory: UITest.SauceDemo
         run: npx codeceptjs run --steps --plugins allure
 
+      # Setup Allure
+      - name: Setup Allure
+        uses: allure-framework/allure-commandline@v2
+        with:
+        version: '2.36.0
+
       # Combine allure-results from API and UI
       - name: Combine Allure results
         run: |
