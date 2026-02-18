@@ -1,5 +1,10 @@
 # Automation Recruitment Task
 
+[![Tests](https://github.com/kkkrzychu/Recruitment_Task/actions/workflows/run-tests-and-allure.yml/badge.svg)](https://github.com/kkkrzychu/Recruitment_Task/actions/workflows/run-tests-and-allure.yml)
+[![Latest Allure Report](https://img.shields.io/badge/Latest%20Allure-Report-purple?logo=allure)](https://kkkrzychu.github.io/Recruitment_Task/)
+
+
+
 This repository contains automated tests for:
 
 - **APITest.DummyJSON** - implemented with CodeceptJS (REST helper)
