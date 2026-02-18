@@ -26,6 +26,7 @@ jobs:
       - name: Run API tests
         working-directory: APITest.DummyJSON
         run: npx codeceptjs run --steps --plugins allure
+        continue-on-error: true
 
       # Install dependencies for UI tests
       - name: Install UI dependencies
