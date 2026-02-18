@@ -1,0 +1,62 @@
+name: Run Tests and Publish Allure
+
+on:
+  push:
+    branches: [ AddGithubActions ]
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Node setup
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '24'
+
+      # Install dependencies for API tests
+      - name: Install API dependencies
+        working-directory: APITest.DummyJSON
+        run: npm ci
+
+      # Run API tests
+      - name: Run API tests
+        working-directory: APITest.DummyJSON
+        run: npx codeceptjs run --steps --plugins allure
+
+      # Install dependencies for UI tests
+      - name: Install UI dependencies
+        working-directory: UITest.SauceDemo
+        run: npm ci
+
+      # Install Playwright browsers
+      - name: Install Playwright Browsers
+        working-directory: UITest.SauceDemo
+        run: npx playwright install --with-deps
+
+      # Run UI tests
+      - name: Run UI tests
+        working-directory: UITest.SauceDemo
+        run: npx codeceptjs run --steps --plugins allure
+
+      # Combine allure-results from API and UI
+      - name: Combine Allure results
+        run: |
+          mkdir -p combined-allure-results
+          cp -r API/allure-results/* combined-allure-results/ || true
+          cp -r UI/allure-results/* combined-allure-results/ || true
+
+      # Generate HTML report
+      - name: Generate Allure HTML
+        run: npx allure generate combined-allure-results --clean -o allure-report
+
+      # Deploy to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          publish_branch: allure-report
