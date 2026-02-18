@@ -8,6 +8,10 @@ This repository contains automated tests for:
 - **UITest.SauceDemo** - umplemented with CodeceptJS + Playwright
 - Gherkin (BDD) syntax is used for test scenarios
 - Allure reporting is supported
+- Tests are running on workflow
+  - on push to main
+  - every 12 hours
+  - manually triggered by user
 
 ### GitHub Pages (allure-report branch)
 The latest generated Allure report is published via GitHub Pages and cen be accesed here:
