@@ -2,7 +2,7 @@ name: Run Tests and Publish Allure
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/5 * * * *"
    # - cron: '0 */8 * * *'
   #push:
    # branches: [ main ]
