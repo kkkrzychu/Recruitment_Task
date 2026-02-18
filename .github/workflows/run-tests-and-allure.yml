@@ -48,7 +48,7 @@ jobs:
         run: npx codeceptjs run --steps --plugins allure
       
 
-     # Combine allure-results from API and UI
+      # Combine allure-results from API and UI
       - name: Combine Allure results
         run: |
           mkdir -p combined-allure-results
@@ -58,13 +58,6 @@ jobs:
       # Generate HTML report
       - name: Generate Allure HTML
         run: npx allure generate combined-allure-results --clean -o allure-report
-
-      - name: Upload Allure Results Artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-         name: allure-results
-         path: allure-results
 
       # Deploy to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
