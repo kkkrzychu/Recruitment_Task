@@ -2,7 +2,7 @@ name: Run Tests and Publish Allure
 
 on:
   push:
-    branches: [ AddGithubActions ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
