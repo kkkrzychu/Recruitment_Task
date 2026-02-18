@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: API  # <-- ważne! uruchamia wszystko w folderze API
+        working-directory: APITest.DummyJSON
 
     steps:
       - name: Checkout repo
