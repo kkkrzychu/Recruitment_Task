@@ -48,17 +48,16 @@ jobs:
         run: npx codeceptjs run --steps --plugins allure
       
 
-      # Combine allure-results from API and UI
-     # - name: Combine Allure results
-      #  run: |
-       #   mkdir -p combined-allure-results
-        #  cp -r APITest.DummyJSON/allure-results/* combined-allure-results/ || true
-         # cp -r UITest.SauceDemo/allure-results/* combined-allure-results/ || true
+     # Combine allure-results from API and UI
+      - name: Combine Allure results
+        run: |
+          mkdir -p combined-allure-results
+          cp -r APITest.DummyJSON/allure-results/* combined-allure-results/ || true
+          cp -r UITest.SauceDemo/allure-results/* combined-allure-results/ || true
 
       # Generate HTML report
       - name: Generate Allure HTML
-        run: npx allure generate allure-results --clean -o allure-report
-       # run: npx allure generate combined-allure-results --clean -o allure-report
+        run: npx allure generate combined-allure-results --clean -o allure-report
 
       - name: Upload Allure Results Artifact
         if: always()
