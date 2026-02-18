@@ -47,7 +47,7 @@ jobs:
       - name: Setup Allure
         uses: allure-framework/allure-commandline@v2
         with:
-        version: '2.36.0
+         version: '2.36.0'
 
       # Combine allure-results from API and UI
       - name: Combine Allure results
