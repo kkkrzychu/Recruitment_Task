@@ -10,14 +10,14 @@ Feature: Products API
     Then the response status should be 200
     And I print titles of products with odd IDs
 
-  Scenario: Create new product
-    Given I create a new product
+  Scenario: Create new product    
+    Given I send a POST request to "/products/add"
     Then the response status should be 201
     And the response should contain correct product data
 
   Scenario: Get and update third product
     Given I send a GET request to "/products/3"
-    When I update the product with id 3 with new title and description
+    When I send a PUT request to "/products/3"
     Then the response status should be 200
     And the product should be updated with new title and description
 

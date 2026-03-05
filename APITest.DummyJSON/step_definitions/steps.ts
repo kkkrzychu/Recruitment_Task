@@ -5,12 +5,12 @@ Given('I send a GET request to {string}', async (endpoint: string) => {
   await I.sendRequestToEndpoint(endpoint);
 });
 
-Given('I create a new product', async () => {
-  await I.createProduct(newProduct);
+Given('I send a POST request to {string}', async (endpoint: string) => {
+  await I.createProduct(endpoint, newProduct);
 });
 
-When('I update the product with id {int} with new title and description', async (id: number) => {
-  await I.updateProduct(id);
+When('I send a PUT request to {string}', async (endpoint: string) => {
+  await I.updateProduct(endpoint);
 });
 
 Then('the response status should be {int}', (expectedStatus: number) => {

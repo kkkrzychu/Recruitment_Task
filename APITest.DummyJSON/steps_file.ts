@@ -1,4 +1,6 @@
 import assert from 'assert';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 export = function () {
 
@@ -8,18 +10,13 @@ export = function () {
   let responseTime: number;
 
   return actor({
-
-    /*
-    * This method doesn't really meet DRY principle
-    * In a production-ready framework i would like to refactor it into reusable APIURL parameter
-    * Due to lack of time i decided to keep it simple and explicit
-    */
+    
     async sendRequestToEndpoint(endpoint: string) {
       // Measure request duration manually
       const start = Date.now();
 
       // Direct fetch call (base URL hardcoded intentionally for simplicity)
-      const response = await fetch(`https://dummyjson.com${endpoint}`);
+      const response = await fetch(`${process.env.BASEURL}${endpoint}`);
       const data = await response.json();
 
       const end = Date.now();
@@ -34,7 +31,7 @@ export = function () {
       fetchedData = data;
 
       // Calculate total response time in milliseconds
-      responseTime = end - start;
+      responseTime = end - start;      
     },
 
     assertResponseStatus(expectedStatus: number) {
@@ -56,19 +53,17 @@ export = function () {
         }
       });
     },
-
-    /**
- * Similar story as with sendRequestToEndpoint
- * TODO: Refactor to accept dynamic payload and endpoint, reuse API client.
- */
-    async createProduct(product: {
+  
+    async createProduct(endpoint: string, product: {
       title: string;
       description: string;
       price: number;
       brand: string;
     }) {
       // Send POST request to create a new product
-      const response = await fetch('https://dummyjson.com/products/add', {
+
+      console.log(`Creating product with title: ${product.title}`);
+      const response = await fetch(`${process.env.BASEURL}${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -98,19 +93,14 @@ export = function () {
       assert.strictEqual(lastResponse.data.description, expected.description);
       assert.strictEqual(lastResponse.data.price, expected.price);
       assert.strictEqual(lastResponse.data.brand, expected.brand);
-    },
+    },  
 
-    /**
-     * Again, hardcoded endpoint and payload structure for simplicity
-     * TODO: Refactor to be more flexible and reusable, extract API client logic
-    */
-
-    async updateProduct(id: number) {
+    async updateProduct(endpoint: string) {
       // Define update payload used in this scenario
       const updates = { title: 'Updated Product Title', description: 'Updated Description' };
 
       // Send PUT request to update product by id
-      const response = await fetch(`https://dummyjson.com/products/${id}`, {
+      const response = await fetch(`${process.env.BASEURL}${endpoint}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
