@@ -14,8 +14,7 @@ export = function () {
     async sendRequestToEndpoint(endpoint: string) {
       // Measure request duration manually
       const start = Date.now();
-
-      // Direct fetch call (base URL hardcoded intentionally for simplicity)
+      
       const response = await fetch(`${process.env.BASEURL}${endpoint}`);
       const data = await response.json();
 
@@ -95,10 +94,8 @@ export = function () {
       assert.strictEqual(lastResponse.data.brand, expected.brand);
     },  
 
-    async updateProduct(endpoint: string) {
-      // Define update payload used in this scenario
-      const updates = { title: 'Updated Product Title', description: 'Updated Description' };
-
+    async updateProduct(endpoint: string, updates: any) {
+    
       // Send PUT request to update product by id
       const response = await fetch(`${process.env.BASEURL}${endpoint}`, {
         method: 'PUT',
