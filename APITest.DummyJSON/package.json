@@ -20,6 +20,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@playwright/test": "^1.58.2"
+    "@playwright/test": "^1.58.2",
+    "dotenv": "^17.3.1"
   }
 }
