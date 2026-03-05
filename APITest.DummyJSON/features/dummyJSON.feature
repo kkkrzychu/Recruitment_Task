@@ -12,12 +12,16 @@ Feature: Products API
 
   Scenario: Create new product    
     Given I send a POST request to "/products/add"
+    | title         | description      | price | brand      |
+    | Test Product  | Test Description | 999   | Test Brand |
     Then the response status should be 201
     And the response should contain correct product data
 
   Scenario: Get and update third product
     Given I send a GET request to "/products/3"
-    When I send a PUT request to "/products/3"
+    When I send a PUT request to "/products/3" with data
+    | title         | description         |
+    | Updated Title | Updated Description |
     Then the response status should be 200
     And the product should be updated with new title and description
 
