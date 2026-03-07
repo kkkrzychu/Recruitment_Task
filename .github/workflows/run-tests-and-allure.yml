@@ -67,6 +67,17 @@ jobs:
              mkdir -p combined-allure-results/history
              cp -r previous-report/history/* combined-allure-results/history/
           fi
+ 
+      - name: Add executor metadata for Allure
+        run: |
+          cat <<EOF > combined-allure-results/executor.json
+          {
+           "name": "GitHub Actions",
+           "type": "github",
+           "buildName": "Run #${{ github.run_number }}",
+           "buildUrl": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+           }
+           EOF
 
       # Generate HTML report
       - name: Generate Allure HTML
@@ -79,7 +90,6 @@ jobs:
         with:
          name: allure-results
          path: combined-allure-results
-
 
       # Deploy to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
