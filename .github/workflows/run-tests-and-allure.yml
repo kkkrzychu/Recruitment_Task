@@ -1,8 +1,8 @@
 name: Run Tests and Publish Allure
 
 on:
- # schedule:
-  #  - cron: '0 */12 * * *'    
+  schedule:
+    - cron: '0 6 * * *'    
   #push:
    # branches: [ main ]
   workflow_dispatch:
