@@ -65,7 +65,7 @@ jobs:
         run: |
           if [ -d "previous-report/history" ]; then
              mkdir -p combined-allure-results/history
-             cp -r previous-report/history/* combined-allure-results/history.
+             cp -r previous-report/history/* combined-allure-results/history/
           fi
 
       # Generate HTML report
