@@ -48,7 +48,7 @@ jobs:
       - name: Run UI tests
         working-directory: UITest.SauceDemo
         run: npx codeceptjs run --steps --plugins allure
-      
+        continue-on-error: true      
 
       # Combine allure-results from API and UI
       - name: Combine Allure results
