@@ -48,7 +48,7 @@ jobs:
       - name: Run UI tests
         working-directory: UITest.SauceDemo
         run: npx codeceptjs run --steps --plugins allure
-      
+        continue-on-error: true      
 
       # Combine allure-results from API and UI
       - name: Combine Allure results
@@ -56,6 +56,28 @@ jobs:
           mkdir -p combined-allure-results
           cp -r APITest.DummyJSON/allure-results/* combined-allure-results/ || true
           cp -r UITest.SauceDemo/allure-results/* combined-allure-results/ || true
+
+      - name: Load previous Allure history
+        run: |
+          git clone --depth 1 --branch allure-report https://github.com/${{ github.repository }} previous-report || true
+
+      - name: Copy Allure history
+        run: |
+          if [ -d "previous-report/history" ]; then
+             mkdir -p combined-allure-results/history
+             cp -r previous-report/history/* combined-allure-results/history/
+          fi
+ 
+      - name: Add executor metadata for Allure
+        run: |
+          cat <<EOF > combined-allure-results/executor.json
+          {
+           "name": "GitHub Actions",
+           "type": "github",
+           "buildName": "Run #${{ github.run_number }}",
+           "buildUrl": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+           }
+           EOF
 
       # Generate HTML report
       - name: Generate Allure HTML
@@ -68,7 +90,6 @@ jobs:
         with:
          name: allure-results
          path: combined-allure-results
-
 
       # Deploy to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
