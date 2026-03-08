@@ -9,8 +9,7 @@ This repository contains automated tests for:
 - Gherkin (BDD) syntax is used for test scenarios
 - Allure reporting is supported
 - Tests are running on workflow
-  - on push to main
-  - every 12 hours
+  - every morning
   - manually triggered by user
 
 ### GitHub Pages (allure-report branch)
