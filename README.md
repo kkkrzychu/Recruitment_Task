@@ -21,7 +21,6 @@ The report is automatically generated after each successful CI run.
 ## Project Structure
 
 ```
-Recruitment_Task
 │
 ├── APITest.DummyJSON
 │   ├── features            # Gherkin API test scenarios
