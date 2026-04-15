@@ -1,4 +1,3 @@
-# Automation Recruitment Task
 
 [![Tests](https://github.com/kkkrzychu/Recruitment_Task/actions/workflows/run-tests-and-allure.yml/badge.svg)](https://github.com/kkkrzychu/Recruitment_Task/actions/workflows/run-tests-and-allure.yml)
 
